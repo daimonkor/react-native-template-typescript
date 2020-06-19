@@ -1,4 +1,5 @@
 {
   "name": "HelloWorld",
-  "displayName": "HelloWorld"
+  "displayName": "HelloWorld",
+  "version": "0.0.1"
 }

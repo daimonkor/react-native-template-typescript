@@ -7,11 +7,31 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "postinstall": "npx jetify && react-native link"
   },
   "dependencies": {
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.3.0",
+    "@react-navigation/stack": "^5.3.2",
+    "prop-types": "latest",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-keyboard-aware-scroll-view": "^0.9.1",
+    "react-native-modal": "^11.5.6",
+    "react-native-safe-area-context": "^3.0.2",
+    "react-native-screens": "^2.8.0",
+    "react-native-splash-screen": "^3.2.0",
+    "react-native-svg": "^12.1.0",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-native-svg-uri": "^1.2.3",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-act": "^1.8.0",
+    "redux-persist": "^6.0.0",
+    "svg-parser": "^2.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -28,7 +48,9 @@
     "metro-react-native-babel-preset": "^0.58.0",
     "react-test-renderer": "16.11.0",
     "prettier": "^2.0.4",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "@types/react-redux": "^7.1.9",
+    "babel-plugin-transform-export-extensions": "^6.22.0"
   },
   "jest": {
     "preset": "react-native",
