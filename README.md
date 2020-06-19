@@ -15,6 +15,9 @@ npx --ignore-existing react-native init MyApp --template https://github.com/daim
 npx --ignore-existing react-native init MyApp --template file:///Volumes/Data/projects/reactnative/react-native-template-typescript
 ```
 
+Release iOS problem
+https://stackoverflow.com/a/57888449/2203280
+
 ## :bookmark: License
 
 This project is [MIT](LICENSE) licensed.
