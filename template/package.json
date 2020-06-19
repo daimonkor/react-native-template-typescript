@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "postinstall": "npx jetify && react-native link"
+    "pod-refresh": "cd ios && pod cache clean --all && pod install --repo-update",
+    "postinstall": "npx jetify && react-native link && npm run pod-refresh"
   },
   "dependencies": {
     "react": "16.11.0",

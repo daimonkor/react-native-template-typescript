@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { enter } from "./strings.json";
 import {Header, SafeAreaViewBackground} from "../../components";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import SplashScreen from "react-native-splash-screen";
 
 interface StartupScreenState {
 
@@ -18,6 +19,18 @@ interface StartupScreenProps {
 }
 
 class StartupScreen extends Component<StartupScreenProps, StartupScreenState> {
+    timer: number | null = null;
+
+    componentDidMount() {
+        this.timer = setTimeout(() => {
+            SplashScreen.hide();
+        }, 500);
+    }
+
+    componentWillUnmount() {
+        this.timer && clearTimeout(this.timer);
+    }
+
     render() {
         console.log(this.props.settings)
         return (
