@@ -7,14 +7,21 @@ import {
   TouchableOpacityProps,
 } from "react-native";
 import back from "../../../assets/icons/back.svg";
-import { SvgProps } from "react-native-svg";
+import circle from "../../../assets/icons/circle.svgr";
+import { SvgProps, XmlProps } from "react-native-svg";
+import {SvgXmlComponent} from "./svgXmlComponent";
 
 export const Icons = {
   back,
 };
 
+
+export const IconsXml = {
+  circle,
+};
+
 export interface IProps {
-  icon: React.FC<SvgProps>;
+  icon: React.FC<SvgProps> | React.FC<XmlProps> | typeof SvgXmlComponent;
   width?: number | null;
   height?: number | null;
   style?: Object;
@@ -44,10 +51,14 @@ export const Icon: React.FC<IProps> = ({
 
   return (
     <View style={style} onLayout={onLayout}>
-      <SelectedIcon
-        width={calculatedWidth || svgWidth}
-        height={calculatedHeight || svgHeight}
-      />
+      {typeof SelectedIcon === "object" && SelectedIcon}
+      {typeof SelectedIcon !== "object" && (
+          <SelectedIcon
+              width={calculatedWidth || svgWidth}
+              height={calculatedHeight || svgHeight}
+              {...props}
+          />
+      )}
     </View>
   );
 };

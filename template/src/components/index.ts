@@ -5,3 +5,7 @@ export * from "./safeAreaViewBackground";
 export * from "./toggleButton";
 export * from "./textInput";
 export * from "./text";
+export * from "./icons/svgXmlComponent";
+export * from "./confirmDialog";
+export * from "./loadingView";
+export * from "./shadowView";
